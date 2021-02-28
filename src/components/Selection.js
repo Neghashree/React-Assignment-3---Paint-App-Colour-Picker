@@ -3,13 +3,16 @@ import React, { useState } from 'react'
 
 const Selection=(props)=>{
     const {applyColor}=props;
-    const [{background},updateSelectionStyle]=useState({ background: "" })
+    const {background}=props;
+    
 
-    <div className="fix-box" style={background:background}>
-    <h2 className="subheading">Selection
-    <button onClick={()=>applyColor(updateSelectionStyle)}>apply</button>
-     </h2>
-    </div>
+    return (
+        <div className="fix-box" style={background}>
+        <h2 className="subhheading">Selection</h2>
+        <button onClick={applyColor}>Apply</button>
+
+        </div>
+    )
 
 
 }
