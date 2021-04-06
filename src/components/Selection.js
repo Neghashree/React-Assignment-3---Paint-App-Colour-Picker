@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
+import React,{useState} from "react";
 
 
-const Selection=(props)=>{
-    const {applyColor}=props;
-    const {background}=props;
+const Selection = (props) => {
+
+  const [selectedColour,updateSelectionStyle]=useState({background:""})
+  const { applyColor} = props; //method
+  //object
+
+  return (
+    <div className="fix-box"  style={selectedColour}>
+       <h2 className="subhheading">Selection</h2>
+      <button onClick={()=>applyColor(updateSelectionStyle)}>Apply
     
+    </button>
+    </div>
+  );
+};
 
-    return (
-        <div className="fix-box" style={background}>
-        <h2 className="subhheading">Selection</h2>
-        <button onClick={applyColor}>Apply</button>
-
-        </div>
-    )
-
-
-}
-
-export default Selection
+export default Selection;
