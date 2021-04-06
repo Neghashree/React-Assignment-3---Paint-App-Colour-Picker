@@ -8,11 +8,11 @@ const Selection = (props) => {
   //object
 
   return (
-    <div className="fix-box"  style={selectedColour}>
+    <div className="fix-box"  style={selectedColour} onClick={()=>applyColor(updateSelectionStyle)}>
        <h2 className="subhheading">Selection</h2>
-      <button onClick={()=>applyColor(updateSelectionStyle)}>Apply
+    {/* //   <button onClick={()=>applyColor(updateSelectionStyle)}>Apply
     
-    </button>
+    // </button> */}
     </div>
   );
 };
